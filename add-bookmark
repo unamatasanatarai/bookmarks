@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+[[ -z ${1:-} ]] && {
+  echo "usage: ${0##*/} url [desc]"
+  exit 1
+}
+
+url=$1
+desc=${2:-$url}
+echo "- [$desc]($url)" >> README.md
+
+git add README.md
+git commit -m "Added $url"
+git push origin main
