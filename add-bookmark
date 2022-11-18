@@ -2,14 +2,16 @@
 
 set -euo pipefail
 
+cd "${0%/*}"/
+
 [[ -z ${1:-} ]] && {
   echo "usage: ${0##*/} url [desc]"
   exit 1
 }
-
 url=$1
 desc=${2:-$url}
-echo "- [$desc]($url)" >> README.md
+echo "- [$desc]($url)" >> "${0%/*}"/README.md
+echo "${0%/*}"/README.md
 
 git add README.md
 git commit -m "Added $url"
