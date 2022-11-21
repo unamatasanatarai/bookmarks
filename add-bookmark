@@ -14,6 +14,7 @@ desc=${2:-$url}
 
 # if no desc given - attempt download title
 [[ -z ${2:-} ]] && {
+  shopt -s nocasematch
   title="<title>(.*)?</title>"
   while read -r line; do
     if [[ $line =~ $title ]]; then
@@ -23,6 +24,10 @@ desc=${2:-$url}
 }
 
 echo "- [$desc]($url)" >> "${0%/*}"/README.md
-git add README.md
-git commit -m "Added $url"
-git push origin main
+echo "written: [$desc]($url)"
+read -r -p "commit? [N/y] " ans
+if [[ "${ans:0:1}" =~ [Yy] ]]; then
+  git add README.md
+  git commit -m "Added $url"
+  git push origin main
+fi
