@@ -9,3 +9,4 @@
 - [https://google.github.io/styleguide/shellguide.html » styleguide | Style guides for Google-originated open-source projects](https://google.github.io/styleguide/shellguide.html)
 - [https://github.com/dylanaraps/pure-bash-bible » GitHub - dylanaraps/pure-bash-bible: 📖 A collection of pure bash alternatives to external processes.](https://github.com/dylanaraps/pure-bash-bible)
 - [https://github.com/tmux-plugins/tmux-sensible/blob/master/sensible.tmux » tmux-sensible/sensible.tmux at master · tmux-plugins/tmux-sensible · GitHub](https://github.com/tmux-plugins/tmux-sensible/blob/master/sensible.tmux)
+- [https://publicapis.dev/category/public-apis/all](https://publicapis.dev/category/public-apis/all)
